@@ -1,0 +1,666 @@
+/*Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*border+padding+content*/
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Common*/
+
+.clear
+{
+    clear: both;
+}
+
+.text-alice
+{
+    color: aliceblue !important;
+}
+
+.row
+{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column
+{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full
+{
+    width:100%;
+}
+
+.col-half
+{
+    width:50%;
+}
+
+.col-third
+{
+    width: 33.33333%;
+}
+
+.text-center
+{
+    text-align: center !important;
+}
+
+.mt-8
+{
+    margin-top: 8px !important;
+}
+
+.mt-16
+{
+    margin-top: 16px !important;
+}
+
+.mt-32
+{
+    margin-top: 32px !important;
+}
+
+.buy{
+    text-decoration: none;
+    color:aqua;
+    background-color: black;
+    padding: 9.5px 17px;
+    display: inline-block;
+    border:  none;
+    text-align: center;
+    appearance: none;
+}
+
+.pull-right
+{
+    float: right !important;
+}
+
+.buy:hover
+{
+    color:chartreuse;
+    background-color: slategray;
+    cursor: pointer;
+}
+
+/*Main*/
+
+/*#main  {
+}*/
+
+#header
+{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav
+{
+    display: inline-block;
+}
+
+#nav, .subnav
+{
+   list-style-type: none;
+}
+
+#nav > li /*chi anh huong toi cap 1*/
+{
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a
+{
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+#nav li a
+{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav /*lam xuat hien cac muc trong more*/
+{
+    display: block;
+}
+
+/*viet gop
+#nav .subnav li:hover a,
+#nav > li:hover > a
+{
+    color: black;
+    background-color: gray;
+}*/
+
+#nav > li:hover > a
+{
+    color: black;
+    background-color: gray;
+}
+
+#nav .subnav
+{
+    display: none;
+    position: absolute;
+    /*top: 46p;*/
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+#nav .subnav a
+{
+    color: black;
+    padding: 0 16px;
+    line-height: 36px;
+}
+
+#nav .subnav li:hover a
+{
+    color: aqua;
+    background: black;
+}
+
+#nav .nav-a-down
+{
+    font-size: 12px;
+}
+
+#header .mobile-menu
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu,
+#header .search-but
+{
+    float: right;
+    padding: 0 24px;
+}
+
+#header .search-but:hover
+{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .mobile-menu:hover
+{
+    background-color:cornflowerblue;
+}
+
+#header .mobile-menu:hover .menu
+{
+    color: black;
+}
+
+#header .menu,
+#header .search-icon
+{
+    color: aliceblue ;
+    font-size: 16px;
+    line-height: 46px;
+    margin: auto;
+}
+
+/*--Slider---*/
+#slider  {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%; /*kich thuoc ti le chieu ngang cua chinh no*/
+    background: url('../img/img_ch.jpg') top center / cover no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#slider .text_content
+{
+    color:rgb(155, 236, 210);
+    position: absolute;
+    bottom: 47px;
+    /*width: 100%;
+    left: 0;
+    right: 0;*/
+}
+
+#slider .textpic
+{
+    font-weight:bold;
+    font-size: 24px;
+    /*margin: 10px 0 10px 0*/
+    margin-bottom: 25px; 
+    text-shadow: 0 0 2px rgb(29, 19, 109);
+}
+
+#slider .despic
+{
+    font-weight:bolder;
+    font-size: 16px;
+    /*margin: 15px 0 15px 0;*/
+    text-shadow: 0 0 5px rgb(14, 74, 120);
+}
+
+/*
+#content  {
+    /*text-align: center;
+    display: flex;
+    justify-content: center;
+ }
+*/
+
+#content .content-section
+{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px 112px;
+    margin-left: auto;
+    margin-right: auto;
+    /*neu padding o tren la padding: 64px 0 112px
+    them vao padding-left: 16px
+             padding-right: 16px*/
+}
+
+#content .section-heading
+{
+    font-size: 30px;
+    font-weight:600;
+    letter-spacing: 4px;
+}
+
+#content .section-subheading
+{
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+    margin-top: 25px;
+}
+
+#content .section-heading,
+#content .section-subheading
+{
+    text-align: center;
+}
+
+#content .detail
+{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 25px;
+}
+
+/*team member*/
+#content .member-list
+{
+    margin-top: 15px;
+}
+
+#content .member-name
+{
+    font-size: 15px;
+}
+
+#content .member-img
+{
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/*--------------C2-------------*/
+/*#content .member-list
+{
+    margin-top: 47px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#content .member-item
+{
+    float: left;    
+}
+
+#content .member-name
+{
+    font-size: 15px;
+    text-align: center;
+}
+
+#content .member-img
+{
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 4px;
+}*/
+
+/*Tour section*/
+.tour-section
+{
+    background-color: black;
+}
+
+.ticket-list
+{
+    margin-top: 40px;
+    list-style: none;
+    background-color: white;
+}
+
+.ticket-list li
+{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-list .sold-out
+{
+    background-color: #f44336;
+    color:aliceblue;
+    padding: 3px 4px;
+    margin-left: 18px;
+}
+
+.ticket-list .number
+{
+    float: right;
+    width: 24px;
+    border-radius: 50%;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2.5px;
+}
+
+/*Place*/
+
+.place-section
+{
+    /*display: flex;
+    justify-content: space-around;*/
+    margin-top: 16px;
+}
+
+/*.place-list
+{
+    /*padding: 0 8px; neu co flex box
+}*/
+
+.place-img
+{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover
+{
+    opacity: 0.6;
+}
+
+.place-body
+{
+    background-color: white;
+    font-size: 15px;
+    padding: 16px;
+}
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+    font-style: oblique;
+}
+.place-time{
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+.place-des{
+    margin: 15px 0 15px 0;
+    line-height: 1.4;
+}
+
+
+/*Contact Form*/
+.contact-content
+{
+    margin-top: 48px;
+    /*font-size: 18px;*/
+    width: 100%;
+}
+
+.contact-info
+{
+    font-size: 18px;
+    line-height:1.5;
+}
+
+.contact-info i[class*="ti-"]
+{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-info a
+{
+    color: blue;
+    opacity: 0.78;
+}
+
+.contact-info a:hover
+{
+    opacity: 1;
+}
+
+.contact-form
+{
+    font-size: 15px;
+}
+
+.contact-form .form-control
+{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+/*-----Map section----*/
+.map-section img
+{
+    width: 100%;
+}
+
+/*Footer section*/
+#footer  {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social
+{
+    font-size: 24px;
+}
+
+#footer .copyright a,
+#footer .social a
+{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+
+#footer .social a:hover
+{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright
+{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+ 
+/*---Modal--*/
+.modal
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.modal-container
+{
+    background: white;
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.4s;
+}
+
+header.modal-heading 
+{
+    background: rgb(8, 98, 74);
+    height: 130px;
+    display: flex;
+    align-items: center; /*can giua chieu cao*/
+    justify-content: center; /*can giua chieu ngang*/
+    font-size: 30px;
+    color:whitesmoke;
+}
+
+.modal-head-icon
+{
+    margin-right: 16px;
+}
+
+.modal-close
+{
+    position: absolute; /*de phu mau len modal-close*/
+    right: 0;
+    top: 0;
+    color: aliceblue;
+    font-weight: 600;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.modal-close:hover
+{
+    opacity: 1;
+}
+
+.modal-body
+{
+    padding: 16px;
+}
+
+.modal-label
+{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input
+{
+    border: 1px solid#ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+button#but-ticket
+{
+    background: rgb(8, 98, 74);
+    border: none;
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+button#but-ticket:hover
+{
+    background-color: black;
+    color:aqua;
+}
+
+footer.modal-footer
+{
+    padding: 16px;
+    text-align: right;
+}
+
+footer.modal-footer a
+{
+    color: rgb(19, 29, 211);
+}
+
+.modal.open
+{
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
