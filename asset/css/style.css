@@ -237,40 +237,49 @@ html{
 }
 
 /*--Slider---*/
-#slider  {
+.slider  
+{
     position: relative;
-    margin-top: 46px;
+    /*margin-top: 46px;
     padding-top: 50%; /*kich thuoc ti le chieu ngang cua chinh no*/
-    background: url('../img/img_ch.jpg') top center / cover no-repeat;
+    /*background: top center / cover no-repeat;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: center;*/
+    box-sizing: inherit;
+    text-align: center;
+    /*display: none;*/
 }
-#slider .text_content
+
+.slider .text_content
 {
-    color:rgb(155, 236, 210);
+    padding: 32px 0;
     position: absolute;
-    bottom: 47px;
+    bottom: 40px;
+    box-sizing: inherit;
+    left: 0;
+    right: 0;
+    color: aquamarine;
     /*width: 100%;
     left: 0;
     right: 0;*/
 }
 
-#slider .textpic
+.slider .textpic
 {
-    font-weight:bold;
+    font-weight:bolder;
     font-size: 24px;
     /*margin: 10px 0 10px 0*/
     margin-bottom: 25px; 
-    text-shadow: 0 0 2px rgb(29, 19, 109);
+    text-shadow: 0 0 2px rgb(198, 18, 18);
 }
 
-#slider .despic
+.slider .despic
 {
     font-weight:bolder;
     font-size: 16px;
     /*margin: 15px 0 15px 0;*/
-    text-shadow: 0 0 5px rgb(14, 74, 120);
+    text-shadow: 0 0 5px rgb(198, 18, 18);
 }
 
 /*
